@@ -8,13 +8,16 @@ function addInput() {
     let age = document.getElementById("age").value;
     let results = document.getElementById("results");
 
-    results.innerHTML += `<ul><li>${firstName}</li><li>${lastName}</li><li>${age}</li></ul>`
+    // let inputArr = [firstName, lastName, age];
 
-    if (firstName.length > 5) {
+    if (firstName.length < 5) {
         console.log("green");
-        results.querySelectorAll
+        this.style.color = "green";
     } else {
         console.log("nooo");
+        this.style.color = "red";
     }
+
+    results.innerHTML += `<ul><li>${firstName}</li><li>${lastName}</li><li>${age}</li></ul>`
 }
 
