@@ -6,18 +6,20 @@ function addInput() {
     let firstName = document.getElementById("first-name").value;
     let lastName = document.getElementById("last-name").value;
     let age = document.getElementById("age").value;
-    let results = document.getElementById("results");
 
-    // let inputArr = [firstName, lastName, age];
+    let results = document.getElementById("result-group");
+    let input = [firstName, lastName];
+    console.log(input);
 
-    if (firstName.length < 5) {
-        console.log("green");
-        this.style.color = "green";
-    } else {
-        console.log("nooo");
-        this.style.color = "red";
+    results.innerHTML += `<ul id="output"></ul>`;
+    let outputList = document.getElementById("output");
+
+    for (i = 0; i < input.length; i++) {
+        if (input[i].length > 5) {
+            outputList.innerHTML += `<li style="color:blue">${input[i]}</li>`;
+        } else {
+            outputList.innerHTML += `<li style="color:red">${input[i]}</li>`;
+        }
     }
-
-    results.innerHTML += `<ul><li>${firstName}</li><li>${lastName}</li><li>${age}</li></ul>`
+    outputList.innerHTML += `<li>${age}</li>`;
 }
-
