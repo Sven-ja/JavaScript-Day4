@@ -13,3 +13,11 @@ ul {
 li {
     list-style: none;
 }
+
+.bg-purple {
+    background-color: blueviolet;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
